@@ -25,13 +25,15 @@
     .header-icon {
       width: 28px;
       height: 28px;
-      background: linear-gradient(135deg, #ff6b35, #f7c59f);
       border-radius: 7px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 15px;
       flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .header-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     .header h1 {
@@ -318,7 +320,7 @@
 </head>
 <body>
   <div class="header">
-    <div class="header-icon">📖</div>
+    <div class="header-icon"><img src="icons/supersubstack_icon.png" alt="SuperSubstack" /></div>
     <div>
       <h1>SuperSubstack</h1>
       <p>Better reading + article archiving</p>

@@ -1,24 +1,26 @@
-# Substack Reader
+# SuperSubstack
 
-Substack Reader is a simple Chrome extension that makes long Substack posts easier to read.
+![SuperSubstack](icons/supersubstack_icon.png)
+
+SuperSubstack is a Chrome extension that enhances your Substack reading experience with a progress bar, bionic reading mode, and article archiving.
 
 ## What it does
 
 - Adds a reading progress bar at the top of Substack articles
-- Shows your current reading percentage while you scroll
-- Offers an optional bionic reading mode to bold the start of words
-- Lets you choose light, medium, or strong bionic reading intensity
+- Offers bionic reading mode to bold the start of words, with light, medium, or strong intensity
+- Lets you archive Substack articles as Markdown files to your local machine
 
 ## How it works
 
-The extension injects a content script into Substack article pages and applies lightweight reading helpers without changing the original article content permanently.
+The extension injects a content script into Substack pages and applies lightweight reading helpers without changing the original article content permanently. The popup gives you quick access to all controls.
 
 ## Files
 
 - `manifest.json` - Chrome extension configuration
-- `content.js` - progress bar and bionic reading logic
+- `content.js` - progress bar, bionic reading, and archiving logic
 - `content.css` - injected styles for the reading UI
 - `popup.html` / `popup.js` - extension popup controls
+- `background.js` - service worker for context menu and download handling
 
 ## Install locally
 
@@ -29,4 +31,4 @@ The extension injects a content script into Substack article pages and applies l
 
 ## Usage
 
-Open any Substack article, click the extension icon, and toggle the reading tools you want.
+Open any Substack article, click the extension icon, and toggle the reading tools you want. To archive an article, navigate to it and use the Archive section in the popup.

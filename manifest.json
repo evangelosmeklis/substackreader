@@ -20,14 +20,14 @@
     "default_popup": "popup.html",
     "default_title": "SuperSubstack",
     "default_icon": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
+      "16": "icons/supersubstack_icon.png",
+      "48": "icons/supersubstack_icon.png",
+      "128": "icons/supersubstack_icon.png"
     }
   },
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "16": "icons/supersubstack_icon.png",
+    "48": "icons/supersubstack_icon.png",
+    "128": "icons/supersubstack_icon.png"
   }
 }
