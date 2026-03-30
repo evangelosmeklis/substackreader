@@ -2,24 +2,26 @@
 
 <img src="icons/supersubstack_icon.png" alt="SuperSubstack" width="180" />
 
-SuperSubstack is a Chrome extension that enhances your Substack reading experience with a progress bar, bionic reading mode, and article archiving.
+SuperSubstack is a Chrome extension that enhances your Substack reading experience with better progress context, typography controls, bionic reading, a reading list, and offline article archiving.
 
 ## What it does
 
-- Adds a reading progress bar at the top of Substack articles
+- Adds a reading progress bar with percent complete, estimated time left, and current section context
 - Offers bionic reading mode to bold the start of words, with light, medium, or strong intensity
-- Lets you archive Substack articles as Markdown files to your local machine
+- Lets you tune typography with reading style, font size, line spacing, content width, and a reset-to-defaults button
+- Saves articles to a local reading list so you can come back to them later
+- Archives Substack articles as self-contained HTML files for offline reading
 
 ## How it works
 
-The extension injects a content script into Substack pages and applies lightweight reading helpers without changing the original article content permanently. The popup gives you quick access to all controls.
+The extension injects a content script into Substack article pages and applies lightweight reading helpers without permanently changing the original content. The popup gives you quick access to progress, focus, typography, reading-list, and archive controls.
 
 ## Files
 
 - `manifest.json` - Chrome extension configuration
-- `content.js` - progress bar, bionic reading, and archiving logic
-- `content.css` - injected styles for the reading UI
-- `popup.html` / `popup.js` - extension popup controls
+- `content.js` - progress context, typography, bionic reading, and archiving logic
+- `content.css` - injected styles for the reading UI and progress HUD
+- `popup.html` / `popup.js` - extension popup controls, typography settings, and reading list UI
 - `background.js` - service worker for context menu and download handling
 
 ## Install locally
@@ -31,4 +33,4 @@ The extension injects a content script into Substack pages and applies lightweig
 
 ## Usage
 
-Open any Substack article, click the extension icon, and toggle the reading tools you want. To archive an article, navigate to it and use the Archive section in the popup.
+Open any Substack article, click the extension icon, and adjust the reading tools you want. You can fine-tune typography, save the article to your reading list, or archive it from the popup for offline reading later.
