@@ -1,6 +1,6 @@
 # SuperSubstack
 
-![SuperSubstack](icons/supersubstack_icon.png)
+<img src="icons/supersubstack_icon.png" alt="SuperSubstack" width="180" />
 
 SuperSubstack is a Chrome extension that enhances your Substack reading experience with a progress bar, bionic reading mode, and article archiving.
 
