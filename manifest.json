@@ -1,21 +1,29 @@
 {
   "manifest_version": 3,
-  "name": "Substack Reader",
-  "version": "1.0.0",
-  "description": "Reading progress bar and ADHD-friendly highlighting for Substack",
-  "permissions": ["storage", "activeTab"],
-  "host_permissions": ["*://substack.com/*", "*://*.substack.com/*"],
+  "name": "SuperSubstack",
+  "version": "2.0.0",
+  "description": "Better Substack experience: reading progress, bionic reading, and article archiving.",
+  "permissions": ["storage", "activeTab", "contextMenus", "downloads", "scripting"],
+  "host_permissions": ["*://substack.com/*", "*://*.substack.com/*", "*://*/*"],
   "content_scripts": [
     {
-      "matches": ["*://substack.com/*", "*://*.substack.com/*"],
+      "matches": ["*://substack.com/*", "*://*.substack.com/*", "*://*/*"],
       "js": ["content.js"],
       "css": ["content.css"],
       "run_at": "document_idle"
     }
   ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Substack Reader"
+    "default_title": "SuperSubstack",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   },
   "icons": {
     "16": "icons/icon16.png",
