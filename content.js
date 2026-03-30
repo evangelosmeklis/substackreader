@@ -338,13 +338,15 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
 
 // ─── Init ─────────────────────────────────────────────────────────────────────
 
-if (isArticlePage()) {
-  loadSettings();
-} else {
-  const observer = new MutationObserver(() => {
-    if (isArticlePage() && !document.getElementById('sr-progress-container')) {
-      loadSettings();
-    }
-  });
-  observer.observe(document.body, { childList: true, subtree: true });
+if (isSubstackPage()) {
+  if (isArticlePage()) {
+    loadSettings();
+  } else {
+    const observer = new MutationObserver(() => {
+      if (isArticlePage() && !document.getElementById('sr-progress-container')) {
+        loadSettings();
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
 }
